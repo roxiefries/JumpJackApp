@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>MoveNet Pose Detection</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+     <!-- Add the image below the content -->
+<img src="title.png" alt="Title" width="1800" height="150">
+</head>
+<body>
+
+<div id="scoreDisplay" style="color: blue; font-size: 40px;">Score: 0</div>
+<div id="scoreMilestone" style="color: green; font-size: 40px;">----------------------</div>
+
+<audio id="announcement" controls style="display: none;"></audio>
+ 
+<div class="container">
+    <video id="video" playsinline></video>
+    <canvas id="canvas"></canvas>
+</div>
+
+<!-- Create a container for joints -->
+<div id="joints-container">
+    <h2>Joints Coordinates</h2>
+    <div id="joints"></div>
+</div>
+
+
+<div id="name-form">
+    <h2>Enter your name:</h2>
+    <input type="text" id="name-input" placeholder="Your Name">
+    <button id="submit-button">Submit</button>
+    <div id="notification" style="display: none; color: blue">Name recorded</div>
+
+</div>
+
+<div id="how">
+    <h3>How it works?</h3>
+    <div id="notification" style="color: blue"> PoseNet is able to track body<br> keypoints & determine locations <br>to identify jumping jacks position<br> w/ hands up and wide legs
+    </div>
+    <img src="keypoints.png" alt="Reward" width="100" height="120">
+</div>
+
+
+<img src="foot.png" alt="footer" width="1800" height="150">
+<div id="explanation">
+    <h3>Goal = 100</h3>
+ </div>
+
+<div id="reward10">
+     <img id="10" src="10.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward20">
+    <img src="20.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward30">
+    <img src="30.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward40">
+    <img src="40.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward50">
+    <img src="50.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward60">
+    <img src="60.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward70">
+    <img src="70.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward80">
+    <img src="80.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward90">
+    <img src="90.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="reward100">
+    <img src="100.png" alt="Reward" width="100" height="100">
+</div>
+
+<div id="congrats">
+    <button id="screenshotButton">Take Screenshot</button>
+    <div id="congrats-text">
+        Congrats on Completing 100 jumping jacks
+        </div>
+    <img src="100.png" alt="Reward" width="550" height="300"></div>
+
+  
+    
+<script>
+    document.getElementById('screenshotButton').addEventListener('click', function() {
+        // Capture the entire body of the webpage
+        html2canvas(document.body).then(function(canvas) {
+            // Convert the canvas to a data URL
+            var dataURL = canvas.toDataURL('image/png');
+    
+            // Create a link element to download the image
+            var a = document.createElement('a');
+            a.href = dataURL;
+            a.download = 'screenshot.png';
+    
+            // Trigger a click event on the link to initiate the download
+            a.click();
+        });
+    });
+    </script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+<script src="app.js"></script>
+
+ 
+ </body>
+</html>

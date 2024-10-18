@@ -1,0 +1,212 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#video, #canvas {
+  width: 640px;
+  height: 480px;
+  margin: 10px;
+ /*  transform: scale(-1, 1); Flip horizontally */
+}
+
+#joints {
+  margin-top: 20px;
+}
+
+/* Position the joints container fixed in the top right corner */
+#joints-container {
+  position: fixed;
+  top: 450px;
+  right: 10px;
+  background-color: #62a83d;
+  padding: 12px;
+  border: 3px solid #834949;
+ 
+}
+/* Position the joints container fixed in the top right corner */
+#name-form {
+  position: fixed;
+  top: 160px;
+  left: 10px;
+  background-color: #62a83d;
+  padding: 10px;
+  border: 3px solid #834949;
+ 
+}
+
+
+#how {
+  position: fixed;
+  top: 160px;
+  right: 10px;
+
+  background-color: #62a83d;
+  padding: 10px;
+  border: 3px solid #834949;
+ 
+}
+
+/* Position the joints container fixed in the top right corner */
+#congrats {
+  position: fixed;
+  top: 250px;
+  right: 960px;
+  background-color: #62a83d;
+  padding: 50px;
+  border: 3px solid #834949;
+  display: none; /* Initially hidden */
+
+  
+ 
+}
+
+#explanation {
+  position: fixed;
+
+  top: 160px;
+  left: 250px;
+  background-color: #f6ee0f;
+  padding: 15px;
+  border: 1px solid #a31e1e;
+ 
+}
+
+#reward10 {
+  position: fixed;
+  top: 350px;
+  left: 10px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ 
+}
+
+#reward20 {
+  position: fixed;
+  top: 350px;
+  left: 180px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ 
+}
+
+#reward30 {
+  position: fixed;
+  top: 430px;
+  left: 10px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ 
+ }
+
+#reward40 {
+  position: fixed;
+  top: 430px;
+  left: 180px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+}
+
+#reward50 {
+  position: fixed;
+  top: 510px;
+  left: 10px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ }
+
+#reward60 {
+  position: fixed;
+  top: 510px;
+  left: 180px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ }
+
+#reward70 {
+  position: fixed;
+  top: 590px;
+  left: 10px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ }
+
+#reward80 {
+  position: fixed;
+  top: 590px;
+  left: 180px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ }
+
+#reward90 {
+  position: fixed;
+  top: 670px;
+  left: 10px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+ }
+
+#reward100 {
+  position: fixed;
+  top: 670px;
+  left: 180px;
+  background-color: #f6ee0f;
+  padding: 3px;
+  border: 3px solid #a31e1e;
+  display: none; /* Initially hidden */
+
+}
+
+
+#screenshotButton {
+  background-color: red; /* Green background */
+  color: white; /* White text */
+  padding: 15px 32px; /* Top and bottom padding of 15px, left and right padding of 32px */
+  font-size: 16px; /* Larger font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor changes to a hand icon when hovered over */
+  transition-duration: 0.4s; /* Smooth transition for hover effect */
+}
+
+#congrats-text {
+  font-size: 24px; /* Increase the font size */
+  font-weight: bold; /* Make the font bold */
+  /* Additional styling as needed */
+}
